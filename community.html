@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Community | Wellness Connect</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display&family=Raleway:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background: url('community.png') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 70px;
+      padding: 20px 30px;
+      background-color: #f8e8d6;
+      border-bottom: 1px solid #d1b897;
+    }
+
+    .logo-text {
+      font-family: 'Playfair Display', cursive;
+      font-size: 28px;
+      color: #333;
+      text-decoration: none;
+      margin-right: 40px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 70px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 18px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .search-bar {
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      text-align: center;
+      color: #5c4033;
+      background-color: rgba(248, 232, 214, 0.8);
+      margin: 40px;
+      border-radius: 20px;
+      position: relative;
+    }
+
+    main::before {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 220px;
+      height: 140px;
+      background: url('sunburst.png') no-repeat center center;
+      background-size: contain;
+      opacity: 0.2;
+      z-index: 0;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      margin-bottom: 30px;
+      position: relative;
+      z-index: 1;
+      color: #5c4033;
+    }
+
+    p {
+      font-size: 18px;
+      max-width: 800px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .join-button {
+      display: inline-block;
+      background-color: #d1b897;
+      color: white;
+      padding: 12px 24px;
+      margin: 20px 0;
+      border-radius: 30px;
+      font-size: 18px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      position: relative;
+      z-index: 1;
+    }
+
+    .join-button:hover {
+      background-color: #b89d7a;
+    }
+
+    ul {
+      text-align: left;
+      max-width: 800px;
+      list-style: none;
+      padding: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    ul li {
+      padding: 10px 0;
+      border-bottom: 1px solid #d1b897;
+      font-size: 18px;
+    }
+
+    footer {
+      background-color: #d1b897;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo-text">Wellness Connect</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="resources.html">Resources</a>
+      <a href="community.html">Community</a>
+      <a href="contact.html">Contact</a>
+      <input type="text" class="search-bar" placeholder="Search...">
+    </nav>
+  </header>
+
+  <main>
+    <h1>Get Involved</h1>
+    <p>Looking to connect in real time?</p>
+    <a href="https://facebook.com" class="join-button" target="_blank">Join Our Group Chat</a>
+
+    <h1>Community Guidelines</h1>
+    <p>Our community is built on respect, kindness, and encouragement. Please remember to:</p>
+    <ul>
+      <li>Be respectful and kind to everyone</li>
+      <li>Support one another's wellness journeys</li>
+      <li>Keep discussions positive and inclusive</li>
+      <li>Report any inappropriate behavior to an admin</li>
+      <li>Remember that this is a safe space for all</li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>ALISSAMEYER@WELLNESSCONNECT.COM &copy; 2025 WELLNESS CONNECT</p>
+  </footer>
+</body>
+
+</html>
