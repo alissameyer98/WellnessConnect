@@ -16,11 +16,12 @@
   /* === Header Styling === */
   header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     background-color: #f5e6d9;
-    padding: 20px 0;
+    padding: 20px 50px;
     border-bottom: 2px solid #d1b897;
+    flex-wrap: wrap;
   }
   
   .logo-container {
@@ -47,13 +48,14 @@
   nav a {
     text-decoration: none;
     color: #333;
-    font-weight: 600;
-    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
     transition: color 0.3s ease;
   }
   
   nav a:hover {
-    color: #f5a623;
+    color: #d4af37;
   }
   
   nav input[type="text"] {
@@ -86,6 +88,48 @@
     margin-bottom: 20px;
   }
   
+  /* === Logo on Home Page Specific Styling === */
+  .left-side img {
+    position: relative;
+    width: 70%;
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  /* === Center Text Styling (Better Together) === */
+  .better-together {
+    margin: auto 0 auto 400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .better-together h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 70px;
+    font-weight: 400;
+    margin-bottom: 30px;
+    color: #333;
+    text-transform: uppercase;
+  }
+  
+  .better-together .line {
+    width: 120px;
+    height: 2px;
+    background: #333;
+    margin: 30px auto;
+  }
+  
+  .better-together span {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 50px;
+    color: #333;
+  }
+  
   /* === Footer === */
   footer {
     text-align: center;
@@ -95,3 +139,130 @@
     font-size: 14px;
     margin-top: 40px;
   }
+  
+  /* === Responsive Shrink Rules === */
+  
+  /* Medium Screens (Tablets) */
+  @media (max-width: 768px) {
+    .left-side img {
+      width: 50%;
+      max-width: 250px;
+    }
+  
+    .better-together {
+      margin: 20px auto;
+    }
+  
+    .better-together h2 {
+      font-size: 50px;
+    }
+  
+    .better-together span {
+      font-size: 40px;
+    }
+  }
+  
+  /* Small Screens (Phones) */
+  @media (max-width: 480px) {
+    .left-side img {
+      width: 40%;
+      max-width: 200px;
+    }
+  
+    .better-together {
+      margin: 20px auto;
+    }
+  
+    .better-together h2 {
+      font-size: 40px;
+    }
+  
+    .better-together span {
+      font-size: 30px;
+    }
+  }
+  
+  /* === Subscribe Page Polished Styling === */
+.subscribe-main {
+    flex: 1;
+    background: linear-gradient(rgba(255, 248, 240, 0.8), rgba(255, 248, 240, 0.8)),
+                url('images/wellness-background.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+  }
+  
+  .subscribe-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(5px);
+    padding: 40px 30px;
+    border-radius: 20px;
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .subscribe-card h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 36px;
+    color: #5c4033;
+    margin-bottom: 20px;
+  }
+  
+  .subscribe-card p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    color: #5c4033;
+    margin-bottom: 30px;
+  }
+  
+  .subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .subscribe-form input[type="email"] {
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+  
+  .subscribe-form button {
+    padding: 12px;
+    border-radius: 12px;
+    background-color: #d1b897;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .subscribe-form button:hover {
+    background-color: #b89b80;
+  }
+  
+  /* === Subscribe Page - Mobile Adjustments === */
+  @media (max-width: 600px) {
+    .subscribe-card h1 {
+      font-size: 28px;
+    }
+  
+    .subscribe-card p {
+      font-size: 16px;
+    }
+  
+    .subscribe-form input[type="email"],
+    .subscribe-form button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  
+  

@@ -1,107 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home | Wellness Connect</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display&family=Raleway:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display&family=Raleway:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'Montserrat', sans-serif;
       background-color: #f8e8d6;
-      margin: 0;
-      padding: 0;
-      height: 100vh;
+      color: #5c4033;
       display: flex;
       flex-direction: column;
+      min-height: 100vh;
     }
 
+    /* Header */
     header {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      gap: 70px;
-      padding: 20px 30px;
-      background-color: #f8e8d6;
-      border-bottom: 1px solid #d1b897;
+      padding: 20px 50px;
+      background-color: #f5e6d9;
+      border-bottom: 2px solid #d1b897;
+      flex-wrap: wrap;
     }
+
 
     .logo-text {
       font-family: 'Playfair Display', cursive;
       font-size: 28px;
       color: #333;
       text-decoration: none;
-      margin-right: 40px;
     }
 
     nav {
       display: flex;
+      justify-content: center;
       align-items: center;
-      gap: 70px;
-      font-family: 'Raleway', sans-serif;
-      font-weight: 300;
-      font-size: 18px;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 10px;
     }
 
     nav a {
       text-decoration: none;
       color: #333;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 18px;
+      transition: color 0.3s ease;
     }
 
-    .search-bar {
+    nav a:hover {
+      color: #f5a623;
+    }
+
+    nav input[type="text"] {
       padding: 6px 12px;
       border-radius: 20px;
       border: 1px solid #ccc;
+      width: 200px;
     }
 
+    /* Main */
     .home-main {
       display: flex;
       flex: 1;
+      flex-wrap: nowrap;
     }
 
     .left-side {
       flex: 1.5;
-      padding: 60px;
-      display: flex;
-      flex-direction: column;
       background-color: #f8e8d6;
-      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 40px;
+      gap: 40px;
     }
 
     .left-side img {
-      position: absolute;
-      left: 50px;
-      top: 50%;
-      transform: translateY(-50%);
-      height: 80vh;
-      width: auto;
-      max-width: none;
+      width: 250px;
+      height: auto;
     }
 
+
     .better-together {
-      margin: auto 0 auto 450px;
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
     }
 
     .better-together h2 {
       font-family: 'Playfair Display', serif;
       font-size: 80px;
       font-weight: 400;
-      margin-bottom: 40px;
       color: #333;
       text-transform: uppercase;
+      margin-bottom: 20px;
     }
 
     .better-together .line {
       width: 150px;
       height: 2px;
       background: #333;
-      margin: 40px auto;
+      margin: 20px auto;
     }
 
     .better-together span {
@@ -124,23 +132,77 @@
 
     .join-now {
       position: absolute;
-      top: 180px;
-      right: 140px;
+      top: 30px;
+      right: 30px;
+      background: rgba(255, 255, 255, 0.7);
       font-family: 'Playfair Display', serif;
+      padding: 8px 20px;
+      border-radius: 20px;
       font-size: 18px;
       color: #333;
-      background: transparent;
-      padding: 5px 15px;
-      border-radius: 20px;
       cursor: pointer;
     }
 
+    /* Footer */
     footer {
       background-color: #d1b897;
       color: #fff;
       text-align: center;
       padding: 10px 0;
       font-size: 14px;
+      margin-top: auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 1000px) {
+      .left-side {
+        flex-direction: column;
+        gap: 20px;
+        padding: 40px 20px;
+      }
+
+      .left-side img {
+        width: 400px; /* Increase the size for desktop screens */
+        height: auto; /* Maintain aspect ratio */
+      }
+
+      .better-together h2 {
+        font-size: 50px;
+      }
+
+      .better-together span {
+        font-size: 40px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .home-main {
+        flex-direction: column;
+      }
+
+      .right-side {
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-text {
+        font-size: 20px;
+      }
+
+      .better-together h2 {
+        font-size: 40px;
+      }
+
+      .better-together span {
+        font-size: 30px;
+      }
+
+      .join-now {
+        font-size: 14px;
+        top: 10px;
+        right: 10px;
+      }
     }
   </style>
 </head>
@@ -154,13 +216,13 @@
       <a href="resources.html">Resources</a>
       <a href="community.html">Community</a>
       <a href="contact.html">Contact</a>
-      <input type="text" class="search-bar" placeholder="Search..." />
+      <input type="text" class="search-bar" placeholder="Search...">
     </nav>
   </header>
 
   <main class="home-main">
     <section class="left-side">
-      <img src="wellnessconnectlogo.png" alt="Wellness Connect Logo" />
+      <img src="wellnessconnectlogo.png" alt="Wellness Connect Logo">
       <div class="better-together">
         <h2>BETTER</h2>
         <div class="line"></div>
@@ -168,15 +230,15 @@
       </div>
     </section>
 
-    <section class="right-side">
-      <img src="yoga-group.jpg" alt="Yoga Group" />
+    <div class="right-side">
+      <img src="yoga-group.jpg" alt="Yoga Group"    >
       <div class="join-now">JOIN NOW →</div>
-    </section>
+    </div>
   </main>
 
   <footer>
     <p>ALISSAMEYER@WELLNESSCONNECT.COM &copy; 2025 WELLNESS CONNECT</p>
   </footer>
 </body>
-
 </html>
+

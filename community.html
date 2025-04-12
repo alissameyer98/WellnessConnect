@@ -7,7 +7,14 @@
   <title>Community | Wellness Connect</title>
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display&family=Raleway:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'Montserrat', sans-serif;
       margin: 0;
@@ -17,16 +24,17 @@
       min-height: 100vh;
       background: url('community.png') no-repeat center center fixed;
       background-size: cover;
+      color: #5c4033;
     }
 
     header {
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
-      gap: 70px;
-      padding: 20px 30px;
-      background-color: #f8e8d6;
-      border-bottom: 1px solid #d1b897;
+      padding: 20px 50px;
+      background-color: #f5e6d9;
+      border-bottom: 2px solid #d1b897;
+      flex-wrap: wrap;
     }
 
     .logo-text {
@@ -34,27 +42,33 @@
       font-size: 28px;
       color: #333;
       text-decoration: none;
-      margin-right: 40px;
     }
 
     nav {
       display: flex;
       align-items: center;
-      gap: 70px;
-      font-family: 'Raleway', sans-serif;
-      font-weight: 300;
-      font-size: 18px;
+      gap: 30px;
+      flex-wrap: wrap;
     }
 
     nav a {
       text-decoration: none;
       color: #333;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 18px;
     }
 
-    .search-bar {
+    nav a:hover {
+      color: #f5a623;
+    }
+
+    nav input[type="text"] {
       padding: 6px 12px;
       border-radius: 20px;
       border: 1px solid #ccc;
+      width: 200px;
+      transition: width 0.3s ease;
     }
 
     main {
@@ -65,7 +79,6 @@
       justify-content: center;
       padding: 60px 20px;
       text-align: center;
-      color: #5c4033;
       background-color: rgba(248, 232, 214, 0.8);
       margin: 40px;
       border-radius: 20px;
@@ -148,10 +161,58 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      margin-top: auto;
     }
 
     footer p {
       margin: 0;
+    }
+
+    /* Responsive Changes */
+    @media (max-width: 768px) {
+      header {
+        padding: 20px;
+      }
+
+      .logo-text {
+        font-size: 24px;
+      }
+
+      nav {
+        gap: 20px;
+      }
+
+      nav a {
+        font-size: 16px;
+      }
+
+      nav input[type="text"] {
+        width: 150px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .logo-text {
+        font-size: 20px;
+      }
+
+      nav a {
+        font-size: 14px;
+      }
+
+      nav input[type="text"] {
+        width: 100%;
+      }
     }
   </style>
 </head>
