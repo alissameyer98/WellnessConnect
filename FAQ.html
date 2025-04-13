@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | Wellness Connect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display&family=Raleway:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: url('ocean.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      color: #5c4033;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: #f5e6d9;
+      border-bottom: 2px solid #d1b897;
+      flex-wrap: wrap;
+    }
+
+    .logo-text {
+      font-family: 'Playfair Display', cursive;
+      font-size: 28px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      color: #f5a623;
+    }
+
+    nav input[type="text"] {
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      width: 200px;
+    }
+
+    nav button {
+      background-color: #d1b897;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-left: 8px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav button:hover {
+      background-color: #b89d7a;
+    }
+
+    main {
+      flex: 1;
+      padding: 60px 20px;
+      background-color: rgba(248, 232, 214, 0.85);
+      margin: 40px;
+      border-radius: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      margin-bottom: 40px;
+    }
+
+    .faq-section {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .faq-question {
+      font-size: 22px;
+      margin: 20px 0 10px;
+      font-weight: bold;
+      color: #5c4033;
+    }
+
+    .faq-answer {
+      font-size: 18px;
+      margin-bottom: 20px;
+      color: #5c4033;
+    }
+
+    footer {
+      background-color: #d1b897;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 14px;
+      margin-top: auto;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      header {
+        padding: 20px;
+      }
+      .logo-text {
+        font-size: 24px;
+      }
+      nav {
+        gap: 20px;
+      }
+      nav input[type="text"] {
+        width: 150px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        flex-direction: column;
+      }
+      nav {
+        justify-content: center;
+      }
+      .logo-text {
+        font-size: 20px;
+      }
+      nav a {
+        font-size: 14px;
+      }
+      nav input[type="text"] {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo-text">Wellness Connect</a>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="resources.html">Resources</a>
+        <a href="community.html">Community</a>
+        <a href="events.html">Events</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact.html">Contact</a>
+        <form id="site-search-form" class="search-form" style="display:flex;gap:10px;">
+          <input type="text" id="search-input" placeholder="Search..." />
+          <button type="submit">Let's go!</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Frequently Asked Questions</h1>
+    <section class="faq-section">
+      <div class="faq-item">
+        <p class="faq-question">How can I join local wellness events?</p>
+        <p class="faq-answer">You can check our Events page for upcoming activities and RSVP or join the Facebook group for real-time updates!</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-question">Is Wellness Connect free to join?</p>
+        <p class="faq-answer">Yes! All events and activities listed are free or low-cost unless otherwise noted. Joining the community is free.</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-question">How do I host an event?</p>
+        <p class="faq-answer">If you'd like to host a wellness event, simply reach out through our Contact page. We'd love to help you organize it!</p>
+      </div>
+
+      <div class="faq-item">
+        <p class="faq-question">How do I stay updated?</p>
+        <p class="faq-answer">Subscribe to our email list on the Subscribe page to get the latest updates, tips, and events directly to your inbox.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>ALISSAMEYER@WELLNESSCONNECT.COM &copy; 2025 WELLNESS CONNECT</p>
+  </footer>
+
+  <script>
+    document.getElementById('site-search-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const query = document.getElementById('search-input').value.trim();
+      if (query) {
+        window.location.href = `search-results.html?query=${encodeURIComponent(query)}`;
+      } else {
+        alert('Please enter a search term.');
+      }
+    });
+  </script>
+</body>
+</html>
