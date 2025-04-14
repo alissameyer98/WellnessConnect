@@ -130,24 +130,15 @@
     color: #333;
   }
   
- footer {
-  background-color: #d1b897;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 14px;
-  font-weight: 300; /* soft and not bold */
-  margin-top: auto;
-  font-family: 'Montserrat', sans-serif; /* match your site font */
-}
-
-footer p {
-  color: #fff; /* ensure the paragraph text is bright white */
-  margin: 0;
-}
+ /* === Footer === */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #d1b897;
+    color: #fff;
+    font-size: 14px;
+    margin-top: 40px;
+  }
 
   
   /* === Responsive Shrink Rules === */
