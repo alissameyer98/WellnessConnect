@@ -141,6 +141,10 @@
     font-size: 14px;
     margin-top: auto;
   }
+footer p {
+  color: #fff; /* <- this makes sure text inside footer stays white */
+  margin: 0;
+}
   
   /* === Responsive Shrink Rules === */
   
