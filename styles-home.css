@@ -130,14 +130,16 @@
     color: #333;
   }
   
-  /* === Footer === */
-  footer {
-    text-align: center;
-    padding: 20px;
+ footer {
     background-color: #d1b897;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
     font-size: 14px;
-    margin-top: 40px;
+    margin-top: auto;
   }
   
   /* === Responsive Shrink Rules === */
