@@ -71,6 +71,24 @@
       transition: width 0.3s ease;
     }
 
+    nav button {
+      background-color: #d1b897;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-left: 8px;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav button:hover {
+      background-color: #b89d7a;
+    }
+
     main {
       flex: 1;
       display: flex;
@@ -79,7 +97,7 @@
       justify-content: center;
       padding: 60px 20px;
       text-align: center;
-      background-color: rgba(248, 232, 214, 0.8);
+      background-color: rgba(248, 232, 214, 0.84);
       margin: 40px;
       border-radius: 20px;
     }
@@ -96,6 +114,8 @@
       max-width: 800px;
       line-height: 1.6;
       margin-bottom: 20px;
+      color: #333;
+
     }
 
     footer {
@@ -171,9 +191,13 @@
       <a href="about.html">About Us</a>
       <a href="resources.html">Resources</a>
       <a href="community.html">Community</a>
+      <a href="events.html">Events</a>
+      <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
-      <input type="text" class="search-bar" placeholder="Search...">
-    </nav>
+      <form id="site-search-form" class="search-form" style="display:flex;gap:10px;">
+        <input type="text" id="search-input" placeholder="Search..." />
+        <button type="submit">Let's go!</button>
+  </nav>
   </header>
 
   <main>
@@ -186,6 +210,20 @@
   <footer>
     <p>ALISSAMEYER@WELLNESSCONNECT.COM &copy; 2025 WELLNESS CONNECT</p>
   </footer>
-</body>
 
+  <script>
+    document.getElementById('site-search-form').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the form from refreshing the page
+  
+      const query = document.getElementById('search-input').value.trim(); // Get the search input value
+  
+      if (query) {
+        // Redirect to the search results page with the query as a URL parameter
+        window.location.href = `search-results.html?query=${encodeURIComponent(query)}`;
+      } else {
+        alert('Please enter a search term.');
+      }
+    });
+  </script>
+</body>
 </html>
