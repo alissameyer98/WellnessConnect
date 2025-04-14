@@ -131,20 +131,24 @@
   }
   
  footer {
-    background-color: #d1b897;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px 0;
-    font-size: 14px;
-    margin-top: auto;
-  }
+  background-color: #d1b897;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  font-weight: 300; /* soft and not bold */
+  margin-top: auto;
+  font-family: 'Montserrat', sans-serif; /* match your site font */
+}
+
 footer p {
-  color: #fff; /* <- this makes sure text inside footer stays white */
+  color: #fff; /* ensure the paragraph text is bright white */
   margin: 0;
 }
+
   
   /* === Responsive Shrink Rules === */
   
