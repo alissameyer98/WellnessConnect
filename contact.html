@@ -183,16 +183,17 @@
     }
 
     .success-message {
-      font-size: 18px;
-      color: #fff;
-      margin-top: 20px;
-      opacity: 0;
-      transition: opacity 0.8s ease;
-    }
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
 
-    .success-message.show {
-      opacity: 1;
-    }
+.success-message.show {
+  opacity: 1;
+}
 
     footer {
       background-color: #d1b897;
@@ -282,10 +283,11 @@
       <div class="contact-card">
         <h2>Subscribe</h2>
         <form id="subscribe-form" class="subscribe-form">
-          <input type="email" id="email" placeholder="Enter your email" required />
-          <button type="submit">Subscribe</button>
-          <p class="success-message" id="success-message">Success! You've been added to our list!</p>
-        </form>
+            <input type="email" id="email" placeholder="Enter your email" required />
+            <button type="submit">Subscribe</button>
+            <p id="success-message" class="success-message">Success! We'll be in touch!</p>
+          </form>
+          
       </div>
       
     </div>
@@ -296,7 +298,7 @@
   </footer>
 
   <script>
-    // Site Search
+    // SEARCH BAR HANDLER
     document.getElementById('site-search-form').addEventListener('submit', function (event) {
       event.preventDefault();
       const query = document.getElementById('search-input').value.trim();
@@ -306,15 +308,19 @@
         alert('Please enter a search term.');
       }
     });
-
-    document.getElementById('subscribe-form').addEventListener('submit', function(event) {
-  event.preventDefault();
-  const successMessage = document.getElementById('success-message');
-  successMessage.style.display = 'block';
-  setTimeout(() => {
-    successMessage.classList.add('show');
-  }, 100); // Delay to trigger fade-in
-});
+  
+    // SUBSCRIBE FORM HANDLER
+    document.getElementById('subscribe-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const emailInput = document.getElementById('email');
+      const successMessage = document.getElementById('success-message');
+  
+      if (emailInput.value.trim() !== '') {
+        successMessage.classList.add('show');
+        emailInput.value = '';
+      }
+    });
   </script>
+  
 </body>
 </html>
