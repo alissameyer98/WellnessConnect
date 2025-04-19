@@ -251,19 +251,34 @@
     <p>ALISSAMEYER@WELLNESSCONNECT.COM &copy; 2025 WELLNESS CONNECT</p>
   </footer>
 
-  <script>
-    document.getElementById('site-search-form').addEventListener('submit', function (event) {
-      event.preventDefault(); // Prevent the form from refreshing the page
+ <script>
+   
+    // Grab the query from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const query = urlParams.get('query')?.toLowerCase() || "";
   
-      const query = document.getElementById('search-input').value.trim(); // Get the search input value
+    // Update the search display
+    document.getElementById('search-query').textContent = `"${query}"`;
   
-      if (query) {
-        // Redirect to the search results page with the query as a URL parameter
-        window.location.href = `search-results.html?query=${encodeURIComponent(query)}`;
-      } else {
-        alert('Please enter a search term.');
+    const resultsList = document.getElementById('results-list');
+  
+    let resultsFound = 0;
+    for (const [title, content] of Object.entries(sitePages)) {
+      if (content.toLowerCase().includes(query)) {
+        const listItem = document.createElement('li');
+        const highlighted = content.replace(
+          new RegExp(query, 'gi'),
+          (match) => `<mark>${match}</mark>`
+        );
+        listItem.innerHTML = `<strong>${title}</strong>: ${highlighted}`;
+        resultsList.appendChild(listItem);
+        resultsFound++;
       }
-    });
+    }
+  
+    if (resultsFound === 0) {
+      resultsList.innerHTML = "<li>No results found. Try a different keyword!</li>";
+    }
   </script>
 </body>
 </html>
