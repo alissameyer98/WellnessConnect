@@ -252,33 +252,49 @@
   </footer>
 
  <script>
-   
-    // Grab the query from URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const query = urlParams.get('query')?.toLowerCase() || "";
-  
-    // Update the search display
-    document.getElementById('search-query').textContent = `"${query}"`;
-  
-    const resultsList = document.getElementById('results-list');
-  
-    let resultsFound = 0;
-    for (const [title, content] of Object.entries(sitePages)) {
-      if (content.toLowerCase().includes(query)) {
-        const listItem = document.createElement('li');
-        const highlighted = content.replace(
-          new RegExp(query, 'gi'),
-          (match) => `<mark>${match}</mark>`
-        );
-        listItem.innerHTML = `<strong>${title}</strong>: ${highlighted}`;
-        resultsList.appendChild(listItem);
-        resultsFound++;
+  const query = new URLSearchParams(window.location.search).get("query");
+  const pagesToSearch = [
+    { name: "Home", url: "index.html" },
+    { name: "About Us", url: "about.html" },
+    { name: "Resources", url: "resources.html" },
+    { name: "Community", url: "community.html" },
+    { name: "Events", url: "events.html" },
+    { name: "FAQ", url: "faq.html" },
+    { name: "Contact", url: "contact.html" }
+  ];
+
+  document.getElementById("search-query").textContent = `"${query}"`;
+
+  const resultsList = document.getElementById("results-list");
+
+  if (!query) {
+    document.getElementById("results-heading").textContent = "No search query provided.";
+  } else {
+    Promise.all(pagesToSearch.map(page =>
+      fetch(page.url)
+        .then(response => response.text())
+        .then(html => {
+          if (html.toLowerCase().includes(query.toLowerCase())) {
+            return page;
+          } else {
+            return null;
+          }
+        })
+        .catch(() => null)
+    )).then(results => {
+      const foundPages = results.filter(Boolean);
+      if (foundPages.length === 0) {
+        resultsList.innerHTML = "<li>No results found.</li>";
+      } else {
+        foundPages.forEach(page => {
+          const li = document.createElement("li");
+          li.innerHTML = `<a href="${page.url}">${page.name}</a>`;
+          resultsList.appendChild(li);
+        });
       }
-    }
-  
-    if (resultsFound === 0) {
-      resultsList.innerHTML = "<li>No results found. Try a different keyword!</li>";
-    }
-  </script>
+    });
+  }
+</script>
+
 </body>
 </html>
