@@ -1,11 +1,12 @@
-<!-- SAVE THIS AS resources.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Resources | Wellness Connect</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display&family=Raleway:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display&family=Raleway:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+
   <style>
     body {
       font-family: 'Montserrat', sans-serif;
@@ -88,40 +89,42 @@
     main {
       flex: 1;
       padding: 60px 20px;
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    .resource-content {
+    .resource-box {
       background-color: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(4px);
       padding: 40px 30px;
       border-radius: 20px;
       max-width: 900px;
-      margin: 0 auto;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     }
 
-    h1 {
+    .resource-box h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 48px;
-      margin-bottom: 40px;
-      color: #5c4033;
+      font-size: 42px;
+      margin-bottom: 20px;
     }
 
-    .resource-links ul {
-      list-style: none;
-      padding: 0;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .resource-links li {
-      padding: 10px 0;
-      border-bottom: 1px solid #d1b897;
+    .resource-box p {
       font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .resource-links {
+      font-size: 18px;
+      text-align: left;
+      margin-top: 20px;
     }
 
     .resource-links a {
-      color: #5c4033;
       text-decoration: none;
+      color: #5c4033;
       font-weight: 500;
     }
 
@@ -129,17 +132,19 @@
       color: #f5a623;
     }
 
-    .video-wrapper {
-      margin-top: 40px;
-      display: flex;
-      justify-content: center;
+    .resource-links hr {
+      border: none;
+      border-top: 1px solid #d1b897;
+      margin: 15px 0;
     }
 
     iframe {
-      border-radius: 15px;
       width: 100%;
       max-width: 720px;
-      height: 405px;
+      height: 400px;
+      border: none;
+      border-radius: 15px;
+      margin-top: 40px;
     }
 
     footer {
@@ -148,6 +153,36 @@
       text-align: center;
       padding: 20px 0;
       font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .resource-box h1 {
+        font-size: 32px;
+      }
+
+      iframe {
+        height: 300px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .search-form input[type="text"] {
+        width: 100%;
+      }
+
+      iframe {
+        height: 240px;
+      }
     }
   </style>
 </head>
@@ -163,33 +198,47 @@
       <a href="events.html">Events</a>
       <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
-      <form id="site-search-form" class="search-form">
-        <input type="text" id="search-input" placeholder="Search..." />
-        <button type="submit">Let's go!</button>
-      </form>
     </nav>
+    <form id="site-search-form" class="search-form">
+      <input type="text" id="search-input" placeholder="Search..." />
+      <button type="submit">Let's go!</button>
+    </form>
   </header>
 
   <main>
-    <div class="resource-content">
+    <div class="resource-box">
       <h1>Wellness Resources</h1>
+      <p>Explore curated articles, blogs, and videos to support your well-being journey.</p>
+
       <div class="resource-links">
-        <ul>
-          <li><a href="https://www.mindful.org" target="_blank">Mindful.org – Mindfulness for Everyone</a></li>
-          <li><a href="https://www.healthline.com/nutrition/27-health-and-nutrition-tips" target="_blank">Healthline – Health & Nutrition Tips</a></li>
-          <li><a href="https://blog.calm.com/" target="_blank">Calm Blog – Mental Health & Meditation</a></li>
-          <li><a href="https://goop.com/wellness/?srsltid=AfmBOoro8-eBZ-8GMRIRXnryYhbXG7DNm4OO9tT0PSXYjVeR5XwEQrns" target="_blank">Goop – Wellness</a></li>
-        </ul>
+        <a href="https://www.headspace.com/mindfulness" target="_blank">Mindfulness Techniques – Headspace</a>
+        <hr />
+        <a href="https://www.healthline.com/health/mental-health/self-care-tips" target="_blank">Self-Care Tips – Healthline</a>
+        <hr />
+        <a href="https://www.wellandgood.com" target="_blank">Wellness Articles – Well + Good</a>
+        <hr />
+        <a href="https://www.psychologytoday.com/us/blog/pieces-mind/201903/the-importance-rest" target="_blank">The Importance of Rest – Psychology Today</a>
+        <hr />
       </div>
 
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/inpok4MKVLM" title="5 Minute Meditation You Can Do Anywhere" frameborder="0" allowfullscreen></iframe>
-      </div>
+      <iframe src="https://www.youtube.com/embed/inpok4MKVLM" title="5 Minute Meditation You Can Do Anywhere" allowfullscreen></iframe>
     </div>
   </main>
 
   <footer>
     <p>ALISSAMEYER@WELLNESSCONNECT.COM &copy; 2025 WELLNESS CONNECT</p>
   </footer>
+
+  <script>
+    document.getElementById('site-search-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const query = document.getElementById('search-input').value.trim();
+      if (query) {
+        window.location.href = `search-results.html?query=${encodeURIComponent(query)}`;
+      } else {
+        alert('Please enter a search term.');
+      }
+    });
+  </script>
 </body>
 </html>
