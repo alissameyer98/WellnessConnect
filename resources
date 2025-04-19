@@ -1,0 +1,195 @@
+<!-- SAVE THIS AS resources.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resources | Wellness Connect</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display&family=Raleway:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: url('calm.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #5c4033;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      background-color: #f5e6d9;
+      border-bottom: 2px solid #d1b897;
+      flex-wrap: wrap;
+    }
+
+    .logo-text {
+      font-family: 'Playfair Display', cursive;
+      font-size: 28px;
+      color: #333;
+      text-decoration: none;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 300;
+      font-size: 18px;
+    }
+
+    nav a:hover {
+      color: #f5a623;
+    }
+
+    .search-form {
+      display: flex;
+      gap: 10px;
+    }
+
+    .search-form input[type="text"] {
+      padding: 6px 12px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      width: 200px;
+      transition: width 0.3s ease;
+    }
+
+    .search-form button {
+      background-color: #d1b897;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-family: 'Raleway', sans-serif;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+    }
+
+    .search-form button:hover {
+      background-color: #b89d7a;
+    }
+
+    main {
+      flex: 1;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .resource-content {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 40px 30px;
+      border-radius: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      margin-bottom: 40px;
+      color: #5c4033;
+    }
+
+    .resource-links ul {
+      list-style: none;
+      padding: 0;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .resource-links li {
+      padding: 10px 0;
+      border-bottom: 1px solid #d1b897;
+      font-size: 18px;
+    }
+
+    .resource-links a {
+      color: #5c4033;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .resource-links a:hover {
+      color: #f5a623;
+    }
+
+    .video-wrapper {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    iframe {
+      border-radius: 15px;
+      width: 100%;
+      max-width: 720px;
+      height: 405px;
+    }
+
+    footer {
+      background-color: #d1b897;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="index.html" class="logo-text">Wellness Connect</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="resources.html">Resources</a>
+      <a href="community.html">Community</a>
+      <a href="events.html">Events</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <form id="site-search-form" class="search-form">
+        <input type="text" id="search-input" placeholder="Search..." />
+        <button type="submit">Let's go!</button>
+      </form>
+    </nav>
+  </header>
+
+  <main>
+    <div class="resource-content">
+      <h1>Wellness Resources</h1>
+      <div class="resource-links">
+        <ul>
+          <li><a href="https://www.mindful.org" target="_blank">Mindful.org – Mindfulness for Everyone</a></li>
+          <li><a href="https://www.healthline.com/nutrition/27-health-and-nutrition-tips" target="_blank">Healthline – Health & Nutrition Tips</a></li>
+          <li><a href="https://blog.calm.com/" target="_blank">Calm Blog – Mental Health & Meditation</a></li>
+          <li><a href="https://goop.com/wellness/?srsltid=AfmBOoro8-eBZ-8GMRIRXnryYhbXG7DNm4OO9tT0PSXYjVeR5XwEQrns" target="_blank">Goop – Wellness</a></li>
+        </ul>
+      </div>
+
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/inpok4MKVLM" title="5 Minute Meditation You Can Do Anywhere" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>ALISSAMEYER@WELLNESSCONNECT.COM &copy; 2025 WELLNESS CONNECT</p>
+  </footer>
+</body>
+</html>
