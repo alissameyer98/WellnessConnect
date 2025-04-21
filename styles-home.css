@@ -342,15 +342,20 @@ footer p {
 }
 /* === Resources Page Styles === */
 body.resources-page {
-  /* from embedded <style> */
-  font-family: 'Montserrat', sans-serif;
-  background: url('calm.png') no-repeat center center;
-  background-size: cover;
-  background-attachment: scroll;
-  color: #5c4033;
-  display: flex;
-  flex-direction: column;
+  /* make sure it still covers the full content area */
   min-height: 100vh;
+
+  /* pull in your calm.png */
+  background-image: url('calm.png');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+
+  /* “fix” it to the viewport so it never leaves behind blank space */
+  background-attachment: fixed;
+
+  /* keep your text color */
+  color: #5c4033;
 }
 
 main {
