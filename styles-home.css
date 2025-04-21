@@ -68,7 +68,43 @@
   gap: 10px;
 }
 
-  
+  /* === FAQ Page Styling === */
+
+.faq-main {
+  flex: 1;
+  padding: 60px 20px;
+  background-color: rgba(248, 232, 214, 0.85);
+  margin: 40px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.faq-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin-bottom: 40px;
+  color: #5c4033;
+}
+
+.faq-section {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.faq-question {
+  font-size: 22px;
+  margin: 20px 0 10px;
+  font-weight: bold;
+  color: #5c4033;
+}
+
+.faq-answer {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #5c4033;
+}
+
   /* === About Section === */
   .about-section {
     padding: 60px 20px;
