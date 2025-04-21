@@ -4,9 +4,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(rgba(255, 248, 240, 0.9), rgba(255, 248, 240, 0.9)),
-    url('images/wcbackground.png') no-repeat center center fixed;
-  background-size: cover;
+  background: #f5e6d9; /* Match header color */
   color: #5c4033;
 }
 
@@ -91,27 +89,27 @@ body.home-page {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #f8e8d6;
+  background-color: #f5e6d9;
 }
 
 .home-main {
   display: flex;
-  height: calc(100vh - (header-height + footer-height)); /* Replace with actual header/footer height */
-  overflow: hidden;
+  flex: 1;
+  min-height: calc(100vh - 100px); /* Adjust based on actual header/footer height */
 }
 
-.left-side, .right-side {
+.left-side, .right-side, .better-together {
   flex: 1;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
 }
 
 .left-side img, .right-side img {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image fills the container while maintaining aspect ratio */
+  height: 100vh; /* Extend to reach the footer */
+  object-fit: cover;
   display: block;
 }
 
