@@ -13,60 +13,80 @@
     color: #5c4033;
   }
   
-  /* === Header Styling === */
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f5e6d9;
-    padding: 20px 50px;
-    border-bottom: 2px solid #d1b897;
-    flex-wrap: wrap;
-  }
-  
-  .logo-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-  }
-  
-  .header-logo {
-    height: 100px;
-    object-fit: contain;
-  }
-  
-  /* === Navigation Styling === */
-  nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin-top: 10px;
-  }
-  
-  nav a {
-    text-decoration: none;
-    color: #333;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    transition: color 0.3s ease;
-  }
-  
-  nav a:hover {
-    color: #d4af37;
-  }
-  
-  nav input[type="text"] {
-    padding: 8px 12px;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-  }
+/* === Header Styling === */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5e6d9;
+  padding: 20px 50px;
+  border-bottom: 2px solid #d1b897;
+  flex-wrap: wrap;
+}
+
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #5c4033;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* === Navigation Styling === */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #d4af37;
+}
+
+nav input[type="text"] {
+  padding: 8px 16px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 200px;
+  font-family: 'Raleway', sans-serif;
+}
+
+nav button {
+  background-color: #d1b897;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+nav button:hover {
+  background-color: #b89d7a;
+}
+
 .search-form {
   display: flex;
+  align-items: center;
   gap: 10px;
 }
+
 
   /* === FAQ Page Styling === */
 
