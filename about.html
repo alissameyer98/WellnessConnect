@@ -5,187 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us | Wellness Connect</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-home.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display&family=Raleway:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      background: url('yoga-background.png') no-repeat center center fixed;
-      background-size: cover;
-      color: #5c4033;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 50px;
-      background-color: #f5e6d9;
-      border-bottom: 2px solid #d1b897;
-      flex-wrap: wrap;
-    }
-
-    .logo-text {
-      font-family: 'Playfair Display', cursive;
-      font-size: 28px;
-      color: #333;
-      text-decoration: none;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-family: 'Raleway', sans-serif;
-      font-weight: 300;
-      font-size: 18px;
-    }
-
-    nav a:hover {
-      color: #f5a623;
-    }
-
-    nav input[type="text"] {
-      padding: 6px 12px;
-      border-radius: 20px;
-      border: 1px solid #ccc;
-      width: 200px;
-      transition: width 0.3s ease;
-    }
-
-    nav button {
-      background-color: #d1b897;
-      color: white;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 20px;
-      cursor: pointer;
-      margin-left: 8px;
-      font-family: 'Raleway', sans-serif;
-      font-weight: 600;
-      font-size: 14px;
-      transition: background-color 0.3s ease;
-    }
-
-    nav button:hover {
-      background-color: #b89d7a;
-    }
-
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 60px 20px;
-      text-align: center;
-      background-color: rgba(248, 232, 214, 0.84);
-      margin: 40px;
-      border-radius: 20px;
-    }
-
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 48px;
-      margin-bottom: 30px;
-      color: #333;
-    }
-
-    p {
-      font-size: 18px;
-      max-width: 800px;
-      line-height: 1.6;
-      margin-bottom: 20px;
-      color: #333;
-
-    }
-
-   footer {
-      background-color: #d1b897;
-      color: #fff;
-      text-align: center;
-      padding: 20px 0;
-      font-size: 14px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: auto;
-    }
-
-   footer p {
-  margin: 0;
-  color: #fff !important;
-}
-
-
-    /* Responsive Changes */
-    @media (max-width: 768px) {
-      header {
-        padding: 20px;
-      }
-
-      .logo-text {
-        font-size: 24px;
-      }
-
-      nav {
-        gap: 20px;
-      }
-
-      nav a {
-        font-size: 16px;
-      }
-
-      nav input[type="text"] {
-        width: 150px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      header {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      nav {
-        justify-content: center;
-        gap: 15px;
-      }
-
-      .logo-text {
-        font-size: 20px;
-      }
-
-      nav a {
-        font-size: 14px;
-      }
-
-      nav input[type="text"] {
-        width: 100%;
-      }
-    }
-  </style>
 </head>
 
-<body>
+<body class="about-page">
   <header>
     <a href="index.html" class="logo-text">Wellness Connect</a>
     <nav>
@@ -196,13 +20,13 @@
       <a href="events.html">Events</a>
       <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
-      <form id="site-search-form" class="search-form" style="display:flex;gap:10px;">
+      <form id="site-search-form" class="search-form">
         <input type="text" id="search-input" placeholder="Search..." />
         <button type="submit">Let's go!</button>
   </nav>
   </header>
 
-  <main>
+  <main class="about-main">
     <h1>About Us</h1>
     <p>Welcome to <strong>Wellness Connect</strong> – a community created to help young women find meaningful connections through wellness activities. Our mission is to bridge the gap between college and the professional world by offering a platform where women can discover local events and foster a sense of belonging.</p>
     <p>Wellness Connect provides a space where women can explore a variety of wellness activities, like group hikes, outdoor fitness classes, farmers’ market hangs, and coffee meetups. Our platform features an updated calendar of local events and offerings, as well as chats for users to foster community opportunities themselves!</p>
