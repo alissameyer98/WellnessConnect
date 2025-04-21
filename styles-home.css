@@ -98,8 +98,9 @@ body.home-page {
   min-height: calc(100vh - 100px); /* Adjust based on actual header/footer height */
   z-index: 1;
   position: relative;
-  margin-top: 0; /* Adjust spacing below header if image is overlapping */
-
+  margin-top: header-height; /* Push the container below the header */
+  margin-bottom: footer-height; /* Prevent overlap with the footer */
+  overflow: hidden;
 }
 
 .left-side, .right-side, .better-together {
