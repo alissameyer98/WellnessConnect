@@ -89,8 +89,9 @@ body.home-page {
   background-color: #f5e6d9;
 }
 
-.home-.resources-page main {
+.home-main {
   display: flex;
+  flex-direction: row;          /* ensure horizontal layout */
   flex: 1;
   margin: 0;
   overflow: hidden;
@@ -137,6 +138,7 @@ body.home-page {
   font-size: 50px;
   color: #333;
 }
+
 /* footer stays the same… */
 footer {
   background-color: #d1b897;
