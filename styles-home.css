@@ -101,8 +101,9 @@ body.home-page {
 .home-main {
   display: flex;
   flex: 1;
-  height: fill 
+  height: calc(140vh - 100px); /* Adjust based on actual header+footer height */
 }
+
 
 /* Left third with logo */
 .left-side {
