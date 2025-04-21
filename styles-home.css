@@ -101,41 +101,40 @@ body.home-page {
 .home-main {
   display: flex;
   flex: 1;
-  flex-wrap: nowrap;
+  height: calc(100vh - 100px); /* fills space between header and footer */
+  overflow: hidden;
 }
 
+/* Left third with logo */
 .left-side {
   flex: 1;
+  max-width: 33.33%;
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
-  padding: 60px 40px;
-  gap: 40px;
-  max-width: 50%;
+  align-items: center;
+  background-color: #f8e8d6;
 }
 
-
 .left-side img {
-  width: 220px;
+  width: 200px;
   height: auto;
   object-fit: contain;
 }
 
-
+/* Center third with text */
 .better-together {
+  flex: 1;
+  max-width: 33.33%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center;
+  text-align: center;
 }
-
-
 
 .better-together h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 80px;
+  font-size: 70px;
   font-weight: 400;
   color: #333;
   text-transform: uppercase;
@@ -143,7 +142,7 @@ body.home-page {
 }
 
 .better-together .line {
-  width: 150px;
+  width: 120px;
   height: 2px;
   background: #333;
   margin: 20px auto;
@@ -152,37 +151,26 @@ body.home-page {
 .better-together span {
   font-family: 'Playfair Display', serif;
   font-style: italic;
-  font-size: 60px;
+  font-size: 50px;
   color: #333;
 }
 
+
+/* Right third with photo */
 .right-side {
   flex: 1;
-  min-width: 50%;
-  max-height: 100vh;
+  max-width: 33.33%;
+  height: 100%;
   overflow: hidden;
 }
 
 .right-side img {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
 
-
-.join-now {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  background: rgba(255, 255, 255, 0.7);
-  font-family: 'Playfair Display', serif;
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-size: 18px;
-  color: #333;
-  cursor: pointer;
-}
 
 footer {
   background-color: #d1b897;
