@@ -98,7 +98,7 @@ body.home-page {
 .home-main {
   flex: 1;
   display: flex;
-  height: calc(100vh - 140px); /* header + footer height */
+  min-height: calc(100vh - 140px); /* header + footer height */
 }
 
 .left-side, .right-side, .better-together {
