@@ -118,6 +118,8 @@ body.home-page {
   display: block;
   z-index: 1;
   margin-top: 20px; /* Add slight offset to prevent overlap */
+  margin-bottom: -4px; /* Tighten image to footer */
+
 
 }
 
