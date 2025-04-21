@@ -109,6 +109,8 @@ body.home-page {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0; /* Remove footer gap */
+
 }
 
 .left-side img, .right-side img {
