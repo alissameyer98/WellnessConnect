@@ -122,8 +122,13 @@ body.home-page {
 }
 
 .better-together {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* or center, if you want center-align */
+  text-align: left;
 }
+
 
 .better-together h2 {
   font-family: 'Playfair Display', serif;
