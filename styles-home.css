@@ -98,7 +98,7 @@ body.home-page {
   min-height: calc(100vh - 100px); /* Adjust based on actual header/footer height */
   z-index: 1;
   position: relative;
-  margin-top: 80px; /* Adjust spacing below header if image is overlapping */
+  margin-top: 90px; /* Adjust spacing below header if image is overlapping */
 
 }
 
@@ -163,6 +163,15 @@ footer {
 footer p {
   margin: 0;
   color: #fff !important;
+}
+
+footer p a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  text-decoration: underline;
 }
 
 /* Responsive Adjustments */
