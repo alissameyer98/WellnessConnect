@@ -70,7 +70,18 @@
 
   /* === FAQ Page Styling === */
 
-.faq-main {
+/* === FAQ PAGE STYLES (MOVED FROM HTML) === */
+
+body.faq-page {
+  background: url('ocean.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: #5c4033;
+}
+
+main.faq-main {
   flex: 1;
   padding: 60px 20px;
   background-color: rgba(248, 232, 214, 0.85);
@@ -83,7 +94,6 @@
   font-family: 'Playfair Display', serif;
   font-size: 48px;
   margin-bottom: 40px;
-  color: #5c4033;
 }
 
 .faq-section {
@@ -105,29 +115,40 @@
   color: #5c4033;
 }
 
-  /* === About Section === */
-  .about-section {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
-    text-align: center;
-    color: #5c4033;
+/* Responsive tweaks just for FAQ layout */
+@media (max-width: 768px) {
+  header {
+    padding: 20px;
   }
-  
-  .about-section h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 300;
-    font-size: 48px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    letter-spacing: 3px;
+  .logo-text {
+    font-size: 24px;
   }
-  
-  .about-section p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 20px;
+  nav {
+    gap: 20px;
   }
+  nav input[type="text"] {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+  }
+  nav {
+    justify-content: center;
+  }
+  .logo-text {
+    font-size: 20px;
+  }
+  nav a {
+    font-size: 14px;
+  }
+  nav input[type="text"] {
+    width: 100%;
+  }
+}
+
   
   /* === Logo on Home Page Specific Styling === */
   .left-side img {
