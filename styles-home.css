@@ -3,7 +3,6 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
   background: linear-gradient(rgba(255, 248, 240, 0.9), rgba(255, 248, 240, 0.9)),
     url('images/wcbackground.png') no-repeat center center fixed;
@@ -96,23 +95,23 @@ body.home-page {
 }
 
 .home-main {
-  flex: 1;
   display: flex;
-  min-height: calc(100vh - 140px); /* header + footer height */
+  height: calc(100vh - (header-height + footer-height)); /* Replace with actual header/footer height */
+  overflow: hidden;
 }
 
-.left-side, .right-side, .better-together {
+.left-side, .right-side {
   flex: 1;
-  min-height: calc(100vh - 140px);
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
 .left-side img, .right-side img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Ensures the image fills the container while maintaining aspect ratio */
   display: block;
 }
 
