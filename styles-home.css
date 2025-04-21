@@ -101,7 +101,7 @@ body.home-page {
 .home-main {
   display: flex;
   flex: 1;
-  height: calc(100vh - 140px); /* Adjust based on actual header+footer height */
+  overflow: hidden
 }
 
 
