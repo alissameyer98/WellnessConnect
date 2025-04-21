@@ -348,4 +348,42 @@ main.faq-main {
     }
   }
   
-  
+  /* === Header Polish Fix === */
+
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  color: #5c4033; /* override purple */
+  font-weight: 600;
+  text-decoration: none;
+}
+
+nav input[type="text"] {
+  padding: 8px 16px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 200px;
+  font-family: 'Raleway', sans-serif;
+  outline: none;
+}
+
+nav button {
+  background-color: #d1b897;
+  color: white;
+  border: none; /* remove black outline */
+  padding: 8px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+  outline: none;
+}
+
+nav button:hover {
+  background-color: #b89d7a;
+}
+
