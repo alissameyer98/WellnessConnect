@@ -91,7 +91,55 @@ nav button:hover {
 
 body.home-page {
   font-family: 'Montserrat', sans-serif;
-  background-color: #f8e8d6;
+  background-color: #f5e6d9; /* Matches the logo background */
+  color: #5c4033;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+  .left-side,
+  .better-together,
+  .right-side {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .left-side {
+    padding: 40px 20px;
+  }
+
+  .better-together h2 {
+    font-size: 50px;
+  }
+
+  .better-together span {
+    font-size: 40px;
+  }
+
+  .right-side {
+    height: 300px;
+  }
+
+  .right-side img {
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 600px) {
+  .better-together h2 {
+    font-size: 40px;
+  }
+
+  .better-together span {
+    font-size: 30px;
+  }
+
+  .left-side img {
+    width: 160px;
+  }
+};
   color: #5c4033;
   display: flex;
   flex-direction: column;
