@@ -272,19 +272,17 @@ footer p {
 }
 /* === Resources Page Styles === */
 body.resources-page {
-  /* make sure it still covers the full content area */
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 
-  /* pull in your calm.png */
+  /* full-page background */
   background-image: url('calm.png');
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-
-  /* “fix” it to the viewport so it never leaves behind blank space */
   background-attachment: fixed;
 
-  /* keep your text color */
   color: #5c4033;
 }
 
@@ -297,14 +295,14 @@ main {
 }
 
 .resource-box {
-  background-color: rgba(255, 255, 255, 0.85);
+  background: rgba(255,255,255,0.85);
   backdrop-filter: blur(4px);
   padding: 40px 30px;
   border-radius: 20px;
   max-width: 900px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
 .resource-box h1 {
@@ -320,7 +318,6 @@ main {
 
 .resource-links {
   font-size: 18px;
-  text-align: center;
   margin-top: 20px;
 }
 
@@ -351,39 +348,44 @@ iframe {
 
 /* === Footer Styling === */
 footer {
-  background-color: #d1b897;
+  background: #d1b897;
   color: #fff;
   text-align: center;
   padding: 20px 0;
   font-size: 14px;
+  margin-top: auto;
 }
 
-/* === Responsive: Resources Page === */
+footer p a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
+
+/* === Responsive tweaks === */
+@media (max-width: 1000px) {
+  .left-side img { width: 400px; height: auto; }
+  .better-together h2 { font-size: 50px; }
+  .better-together span { font-size: 40px; }
+}
+
 @media (max-width: 768px) {
-  .resource-box h1 {
-    font-size: 32px;
-  }
-  iframe {
-    height: 300px;
-  }
+  .home-main, body.resources-page main { flex-direction: column; }
+  .right-side, .left-side { height: auto; }
+  iframe { height: 300px; }
 }
 
 @media (max-width: 480px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-  }
-  nav {
-    justify-content: center;
-    gap: 15px;
-  }
-  .search-form input[type="text"] {
-    width: 100%;
-  }
-  iframe {
-    height: 240px;
-  }
+  header { flex-direction: column; align-items: center; }
+  nav { justify-content: center; gap: 15px; }
+  .better-together h2 { font-size: 40px; }
+  .better-together span { font-size: 30px; }
+  iframe { height: 240px; }
 }
+
 
   /* === FAQ Page Styling === */
 
