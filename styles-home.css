@@ -266,7 +266,8 @@ footer p {
 /* === Resources Page Styles === */
 body.resources-page {
   margin: 0;                          /* kill any default page gap */
-  background-color: #f5e6d9;          /* fallback pink */
+  background-color: #f5e6d9;  /* fallback pink */
+  position: relative;  /* make it the positioning context */
 
   background-image: url('calm.png');
   background-repeat: no-repeat;
@@ -275,6 +276,17 @@ body.resources-page {
   background-size: cover;             /* fill header → footer */
 
   color: #5c4033;
+}
+
+body.resources-page::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('calm.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;     /* scale to cover the entire box */
+  z-index: -1;                /* sit underneath your <main> and <footer> */
 }
 
 
