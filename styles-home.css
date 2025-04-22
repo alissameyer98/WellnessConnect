@@ -265,16 +265,18 @@ footer p {
 }
 /* === Resources Page Styles === */
 body.resources-page {
-  margin: 0;                                   /* kill default body margin */
-  background:
-    #f5e6d9                                  /* fallback pink */,
-    url('calm.png')                         /* your image */,
-    no-repeat
-    center top;                             /* anchor at top center */
-  background-size: cover;                   /* scale to fill full page */
-  background-attachment: scroll;            /* let it span entire document */
+  margin: 0;                          /* kill any default page gap */
+  background-color: #f5e6d9;          /* fallback pink */
+
+  background-image: url('calm.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: scroll;      /* paint over the full document */
+  background-size: cover;             /* fill header → footer */
+
   color: #5c4033;
 }
+
 
 
 
