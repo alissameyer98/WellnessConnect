@@ -961,4 +961,11 @@ footer p { margin: 0; line-height:1.4; }
 footer p a { color:#fff; text-decoration:none; }
 footer p a:hover { text-decoration:underline; }
 
+/* make Community footer flow normally, not stick to viewport bottom */
+body.community-page footer {
+  margin-top: 40px;   /* or whatever space you want above it */
+  /* remove the auto‑margin that was pushing it down: */
+  margin-top: 40px !important;
+}
+
 
