@@ -946,25 +946,29 @@ main.faq-main {
     }
   }
 
-/* === Global Footer === */
+/* === Global Footer (applies to every page) === */
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #d1b897;
-  padding: 20px 0;
-  margin-top: auto;
-  font-size: 14px;
+  padding: 20px 0;        /* consistent vertical padding */
+  margin: 40px 0 0;       /* 40px gap above, none below */
+  font-size: 14px;        /* consistent text size */
   color: #fff;
 }
-footer p { margin: 0; line-height:1.4; }
-footer p a { color:#fff; text-decoration:none; }
-footer p a:hover { text-decoration:underline; }
 
-body.community-page {
-  /* Undo the flex layout so the footer follows the content */
-  display: block !important;
-  min-height: auto !important;
+footer p {
+  margin: 0;              /* reset default */
+  line-height: 1.4;       /* vertical centering in that 20px padding */
 }
 
+footer p a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
 
