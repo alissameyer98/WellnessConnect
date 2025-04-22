@@ -103,6 +103,8 @@ body.home-page {
   align-items: center;
   justify-content: center;
   height: calc(100vh - 122px); /* header + footer height */
+  margin: 0; /* remove any gaps */
+  padding: 0;
 }
 
 .left-side img, .right-side img {
