@@ -8,19 +8,18 @@ html, body {
   color: #5c4033;
 }
 
-/* === Universal Header === */
-.site-header {
+/* === Header Styling === */
+header {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background-color: #f5e6d9;
   padding: 20px 50px;
   border-bottom: 2px solid #d1b897;
+  flex-wrap: wrap;
 }
 
-/* Logo */
-.site-header .logo-text {
+.logo-text {
   font-family: 'Playfair Display', serif;
   font-size: 28px;
   color: #5c4033;
@@ -28,23 +27,16 @@ html, body {
   text-decoration: none;
 }
 
-/* Nav container */
-.site-nav {
+/* === Navigation & Search Styling === */
+nav {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 30px;
+  margin-top: 10px;
 }
 
-/* Nav list & links */
-.nav-list {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-list a {
+nav a {
   text-decoration: none;
   color: #333;
   font-family: 'Raleway', sans-serif;
@@ -53,11 +45,10 @@ html, body {
   transition: color 0.3s ease;
 }
 
-.nav-list a:hover {
+nav a:hover {
   color: #d4af37;
 }
 
-/* Search form */
 .search-form {
   display: flex;
   align-items: center;
