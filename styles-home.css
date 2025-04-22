@@ -266,13 +266,14 @@ footer p {
 /* === Resources Page Styles === */
 body.resources-page {
   margin: 0;                                   /* kill default body margin */
-  background: 
-    #f5e6d9                                  /* your pink fallback */,
-    url('calm.png')                         /* the image */,
+  background:
+    #f5e6d9                                  /* fallback pink */,
+    url('calm.png')                         /* your image */,
     no-repeat
-    center top;                              /* start at the very top center */
-  background-size: cover;                   /* scale to cover the *entire* element */
-  background-attachment: scroll;            /* ← this is the key change */
+    center top;                             /* anchor at top center */
+  background-size: cover;                   /* scale to fill full page */
+  background-attachment: scroll;            /* let it span entire document */
+  color: #5c4033;
 }
 
 
