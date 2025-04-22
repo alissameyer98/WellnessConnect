@@ -265,19 +265,20 @@ footer p {
 }
 /* === Resources Page Styles === */
 body.resources-page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  /* fallback color */
+  background‑color: #f5e6d9;
 
-  /* full-page background */
-  background-image: url('calm.png');
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: auto 100%;
-  background-attachment: fixed;
+  /* shorthand to combine everything */
+  background:  
+    #f5e6d9                      /* your pale pink fallback */
+    url('calm.png')              /* the image */
+    no-repeat                    /* don’t tile */
+    center center fixed;         /* center it and lock it behind content */
 
-  color: #5c4033;
+  /* this makes it fill and crop to always cover the viewport */
+  background-size: cover;       
 }
+
 
 main {
   flex: 1;
