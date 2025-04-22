@@ -8,19 +8,19 @@ html, body {
   color: #5c4033;
 }
 
-
-/* === Header Styling === */
-header {
+/* === Universal Header === */
+.site-header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   background-color: #f5e6d9;
   padding: 20px 50px;
   border-bottom: 2px solid #d1b897;
-  flex-wrap: wrap;
 }
 
-.logo-text {
+/* Logo */
+.site-header .logo-text {
   font-family: 'Playfair Display', serif;
   font-size: 28px;
   color: #5c4033;
@@ -28,16 +28,23 @@ header {
   text-decoration: none;
 }
 
-/* === Navigation & Search Styling === */
-nav {
+/* Nav container */
+.site-nav {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 30px;
-  margin-top: 10px;
 }
 
-nav a {
+/* Nav list & links */
+.nav-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
   text-decoration: none;
   color: #333;
   font-family: 'Raleway', sans-serif;
@@ -46,10 +53,11 @@ nav a {
   transition: color 0.3s ease;
 }
 
-nav a:hover {
+.nav-list a:hover {
   color: #d4af37;
 }
 
+/* Search form */
 .search-form {
   display: flex;
   align-items: center;
@@ -82,6 +90,47 @@ nav a:hover {
 .search-form button:hover {
   background-color: #b89d7a;
 }
+
+/* === Responsive header tweaks === */
+@media (max-width: 768px) {
+  .site-header {
+    padding: 20px;
+  }
+  .site-header .logo-text {
+    font-size: 24px;
+  }
+  .nav-list {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .nav-list a {
+    font-size: 16px;
+  }
+  .search-form input[type="text"] {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-list {
+    justify-content: center;
+    gap: 10px;
+  }
+  .site-header .logo-text {
+    font-size: 20px;
+  }
+  .nav-list a {
+    font-size: 14px;
+  }
+  .search-form input[type="text"] {
+    width: 100%;
+  }
+}
+
 
 /* === Global Footer === */
 footer {
@@ -368,17 +417,6 @@ body.community-page {
   background: url('community.png') no-repeat center center fixed;
   background-size: cover;
   color: #5c4033;
-}
-
-/* header */
-body.community-page header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 50px;
-  background-color: #f5e6d9;
-  border-bottom: 2px solid #d1b897;
-  flex-wrap: wrap;
 }
 
 /* logo */
@@ -768,41 +806,4 @@ main.faq-main {
     }
   }
   
-  /* === Header Polish Fix === */
-
-.logo-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  color: #5c4033; /* override purple */
-  font-weight: 600;
-  text-decoration: none;
-}
-
-nav input[type="text"] {
-  padding: 8px 16px;
-  border-radius: 25px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-  width: 200px;
-  font-family: 'Raleway', sans-serif;
-  outline: none;
-}
-
-nav button {
-  background-color: #d1b897;
-  color: white;
-  border: none; /* remove black outline */
-  padding: 8px 20px;
-  border-radius: 25px;
-  cursor: pointer;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
-  margin-left: 10px;
-  outline: none;
-}
-
-nav button:hover {
-  background-color: #b89d7a;
-}
+ 
