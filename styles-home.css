@@ -156,6 +156,12 @@ footer p a {
 footer p a:hover {
   text-decoration: underline;
 }
+body.community-page footer {
+  /* restore the globals */
+  padding: 20px 0;
+  margin-top: auto;
+}
+
 
 
 /* === Home Page Styles === */
@@ -402,11 +408,6 @@ iframe {
 }
 
 /* === Community Page Styles === */
-body.community-page * {
-  box‑sizing: border‑box;
-  margin: 0;
-  padding: 0;
-}
 
 /* page wrapper */
 body.community-page {
@@ -423,7 +424,7 @@ body.community-page {
 body.community-page .logo-text {
   font-family: 'Playfair Display', serif;
   font-size: 28px;
-  color: #333;
+  color: #5c4033;
   text-decoration: none;
 }
 
