@@ -265,19 +265,16 @@ footer p {
 }
 /* === Resources Page Styles === */
 body.resources-page {
-  /* fallback color */
-  background‑color: #f5e6d9;
-
-  /* shorthand to combine everything */
-  background:  
-    #f5e6d9                      /* your pale pink fallback */
-    url('calm.png')              /* the image */
-    no-repeat                    /* don’t tile */
-    center center fixed;         /* center it and lock it behind content */
-
-  /* this makes it fill and crop to always cover the viewport */
-  background-size: cover;       
+  margin: 0;                                   /* kill default body margin */
+  background: 
+    #f5e6d9                                  /* your pink fallback */,
+    url('calm.png')                         /* the image */,
+    no-repeat
+    center top;                              /* start at the very top center */
+  background-size: cover;                   /* scale to cover the *entire* element */
+  background-attachment: scroll;            /* ← this is the key change */
 }
+
 
 
 main {
