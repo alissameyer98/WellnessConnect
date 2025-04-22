@@ -1,6 +1,6 @@
 /* === Global Styling === */
 html, body {
-  height: 100%;
+  height: auto;
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
@@ -265,32 +265,14 @@ footer p {
 }
 /* === Resources Page Styles === */
 body.resources-page {
-  margin: 0;                          /* kill any default page gap */
-  background-color: #f5e6d9;  /* fallback pink */
-  position: relative;  /* make it the positioning context */
-
+  margin: 0;
   background-image: url('calm.png');
   background-repeat: no-repeat;
   background-position: top center;
-  background-attachment: scroll;      /* paint over the full document */
-  background-size: cover;             /* fill header → footer */
-
-  color: #5c4033;
+  background-attachment: scroll;
+  background-size: cover;
+  /* … */
 }
-
-body.resources-page::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-image: url('calm.png');
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;     /* scale to cover the entire box */
-  z-index: -1;                /* sit underneath your <main> and <footer> */
-}
-
-
-
 
 main {
   flex: 1;
