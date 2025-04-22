@@ -945,30 +945,20 @@ main.faq-main {
       padding: 10px;
     }
   }
-  
- /* === Global Footer (applies to every page) === */
+
+/* === Global Footer === */
 footer {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #d1b897;
-  padding: 20px 0;       /* same height everywhere */
-  margin-top: auto;      /* pushes it to bottom in flex layouts */
-  font-size: 14px;       /* consistent text size */
+  padding: 20px 0;
+  margin-top: auto;
+  font-size: 14px;
   color: #fff;
 }
+footer p { margin: 0; line-height:1.4; }
+footer p a { color:#fff; text-decoration:none; }
+footer p a:hover { text-decoration:underline; }
 
-footer p {
-  margin: 0;             /* reset paragraph default */
-  line-height: 1.4;      /* nice vertical centering */
-}
-
-footer p a {
-  color: #fff;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  text-decoration: underline;
-}
 
