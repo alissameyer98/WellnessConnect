@@ -124,39 +124,6 @@ nav button:hover {
   }
 }
 
-
-/* === Global Footer === */
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #d1b897;
-  color: #fff;
-  padding: 20px 0;
-  font-size: 14px;
-  margin-top: auto;       /* pushes the footer down in flex layouts */
-}
-
-footer p {
-  margin: 0;
-}
-
-footer p a {
-  color: #fff;
-  text-decoration: none;
-}
-
-footer p a:hover {
-  text-decoration: underline;
-}
-body.community-page footer {
-  /* restore the globals */
-  padding: 20px 0;
-  margin-top: auto;
-}
-
-
-
 /* === Home Page Styles === */
 body.home-page {
   display: flex;
@@ -981,4 +948,29 @@ main.faq-main {
     }
   }
   
- 
+ /* === Global Footer (applies to every page) === */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d1b897;
+  padding: 20px 0;       /* same height everywhere */
+  margin-top: auto;      /* pushes it to bottom in flex layouts */
+  font-size: 14px;       /* consistent text size */
+  color: #fff;
+}
+
+footer p {
+  margin: 0;             /* reset paragraph default */
+  line-height: 1.4;      /* nice vertical centering */
+}
+
+footer p a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer p a:hover {
+  text-decoration: underline;
+}
+
