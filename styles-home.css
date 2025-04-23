@@ -972,3 +972,11 @@ footer p a:hover {
   text-decoration: underline;
 }
 
+/* At the very bottom of styles-home.css */
+
+body.community-page main {
+  /* only 40px above, zero below */
+  margin: 40px 0 0 !important;
+}
+
+
