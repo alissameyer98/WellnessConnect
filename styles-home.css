@@ -593,6 +593,34 @@ td.event .popup {
 td.event:hover .popup {
   display: block;
 }
+.event-popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  color: #5c4033;
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  z-index: 1001;
+  text-align: center;
+  max-width: 300px;
+  width: 80%;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0; 
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
 
 
 /* Responsive tweaks */
