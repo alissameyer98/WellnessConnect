@@ -1529,4 +1529,37 @@ body.search-page footer p {
   }
 }
 
+.has-event {
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #b89d7a;
+  color: #fff;
+}
+
+.has-event:hover {
+  background-color: #a07f5d;
+}
+
+.event-tooltip {
+  display: none;
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  color: #5c4033;
+  padding: 10px 15px;
+  border-radius: 10px;
+  white-space: nowrap;
+  font-size: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.has-event:hover .event-tooltip {
+  display: block;
+}
+
+
 
