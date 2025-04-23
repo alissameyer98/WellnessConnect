@@ -1145,6 +1145,7 @@ nav button:hover {
 
 /* === Force same logo color on Events & Contact pages === */
 body.events-page .logo-text,
+body.search-page .logo-text 
 body.contact-page .logo-text {
   color: #5c4033;
 }
