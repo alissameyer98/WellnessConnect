@@ -1333,11 +1333,19 @@ body.search-page footer p {
   color: #fff;
 }
 
+.has-event {
+  position: relative;
+  font-weight: bold;
+  background-color: #b89d7a;
+  color: #fff;
+  cursor: pointer;
+}
+
 .has-event:hover {
   background-color: #a07f5d;
 }
 
-.event-tooltip {
+.has-event .event-tooltip {
   display: none;
   position: absolute;
   bottom: 110%;
@@ -1356,7 +1364,3 @@ body.search-page footer p {
 .has-event:hover .event-tooltip {
   display: block;
 }
-
-
-
-
