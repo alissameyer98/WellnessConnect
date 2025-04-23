@@ -559,12 +559,12 @@ body.events-page .overlay {
   padding: 8px;
 }
 
-.calendar-table td[data-event] {
-  font-weight: bold;
+.calendar-table td.event {
   background-color: #b89d7a;
+  font-weight: bold;
 }
 
-.calendar-table td:hover {
+.calendar-table td.event:hover {
   background-color: #a07f5d;
 }
 
