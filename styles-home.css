@@ -372,12 +372,13 @@ iframe {
 /* page wrapper */
 body.community-page {
   font-family: 'Montserrat', sans-serif;
-  display: block !important;
-  min-height: auto !important;
+  display: block;          /* no more flex container */
+  /* no min-height:100vh */
   background: url('community.png') no-repeat center center fixed;
   background-size: cover;
   color: #5c4033;
 }
+
 
 /* logo */
 body.community-page .logo-text {
