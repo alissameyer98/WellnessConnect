@@ -188,10 +188,18 @@
     <div class="subscribe-card">
       <h1>Join Our Community</h1>
       <p>Subscribe to get updates on events, meetups, and wellness tips!</p>
-  <form action="https://formspree.io/f/meogqveq" method="POST" class="subscribe-form">
-        <input type="email" id="email" placeholder="Enter your email" required />
-        <button type="submit">Subscribe</button>
-      </form>
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="subscribe-form">
+  <input type="text" name="name" placeholder="Your Name" required />
+  <input type="email" name="email" placeholder="Your Email" required />
+  <select name="interest" required>
+    <option value="" disabled selected>Topic of Interest</option>
+    <option value="events">Events & Meetups</option>
+    <option value="wellness">Wellness Tips</option>
+    <option value="both">All Updates</option>
+  </select>
+  <button type="submit">Subscribe</button>
+</form>
+
       <div id="success-message" class="success-message">Success! You have been added to our email list!</div>
     </div>
   </main>
