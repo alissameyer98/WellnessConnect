@@ -19,7 +19,6 @@
       <a href="events.html">Events</a>
       <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
-
       <form id="site-search-form" class="search-form">
         <input type="text" id="search-input" placeholder="Search..." />
         <button type="submit">Let's go!</button>
@@ -27,66 +26,83 @@
     </nav>
   </header>
 
-  <main>
+   <main>
     <h1>Wellness Events Calendar</h1>
 
-   <h2>April 2025</h2>
-<table class="calendar-table">
-  <thead>
-    <tr>
-      <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td class="event" title="Sunset Yoga - 6:00 PM">5 *</td><td>6</td></tr>
-    <tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td class="event" title="Breathwork Workshop - 10:00 AM">12 *</td><td>13</td></tr>
-    <tr><td>14</td><td>15</td><td>16</td><td>17</td><td class="event" title="Guided Hike - 9:00 AM">18 *</td><td>19</td><td>20</td></tr>
-    <tr><td>21</td><td class="event" title="Earth Day Clean-Up - 2:00 PM">22 *</td><td>23</td><td>24</td><td>25</td><td>26</td><td class="event" title="Sound Bath Meditation - 7:30 PM">27 *</td></tr>
-    <tr><td>28</td><td>29</td><td>30</td><td></td><td></td><td></td><td></td></tr>
-  </tbody>
-</table>
-
-
+    <table class="calendar-table">
+      <thead>
+        <tr>
+          <th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td><td></td><td></td><td></td><td></td>
+          <td data-event="Sunset Yoga – 6:00 PM">5 *</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td><td></td><td></td><td></td><td></td>
+          <td data-event="Breathwork Workshop – 10:00 AM">12 *</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td><td></td><td></td><td></td>
+          <td data-event="Group Hike – 9:00 AM">18 *</td>
+          <td></td><td></td>
+        </tr>
+        <tr>
+          <td></td><td data-event="Sound Bath – 7:00 PM">22 *</td><td></td><td></td><td></td>
+          <td></td>
+          <td data-event="Meditation Circle – 6:30 PM">27 *</td>
+        </tr>
+      </tbody>
+    </table>
   </main>
+
+  <!-- Event popup -->
+  <div id="event-popup" class="event-popup">
+    <span id="event-text"></span>
+  </div>
+  <div id="overlay" class="overlay"></div>
 
    <footer>
   <p><a href="mailto:alissameyer@wellnessconnect.com">alissameyer@wellnessconnect.com</a> © 2025 Wellness Connect</p>
   </footer>
 
-  <script>
-  const eventCells = document.querySelectorAll('.calendar-table td[data-event]');
-  const popup = document.getElementById('event-popup');
-  const popupText = document.getElementById('event-text');
-  const overlay = document.getElementById('overlay');
+ <script>
+    const eventCells = document.querySelectorAll('.calendar-table td[data-event]');
+    const popup = document.getElementById('event-popup');
+    const popupText = document.getElementById('event-text');
+    const overlay = document.getElementById('overlay');
 
-  eventCells.forEach(cell => {
-    cell.addEventListener('click', () => {
-      const eventText = cell.getAttribute('data-event');
-      popupText.textContent = eventText;
-      popup.style.display = 'block';
-      overlay.style.display = 'block';
+    eventCells.forEach(cell => {
+      cell.addEventListener('click', () => {
+        const eventText = cell.getAttribute('data-event');
+        popupText.textContent = eventText;
+        popup.style.display = 'block';
+        overlay.style.display = 'block';
+      });
     });
-  });
 
-  overlay.addEventListener('click', () => {
-    popup.style.display = 'none';
-    overlay.style.display = 'none';
-  });
-
-  // Search form handling
-  const searchForm = document.getElementById('site-search-form');
-  if (searchForm) {
-    searchForm.addEventListener('submit', function(event) {
-      event.preventDefault();
-      const query = document.getElementById('search-input').value.trim();
-      if (query) {
-        window.location.href = `search-results.html?query=${encodeURIComponent(query)}`;
-      } else {
-        alert('Please enter a search term.');
-      }
+    overlay.addEventListener('click', () => {
+      popup.style.display = 'none';
+      overlay.style.display = 'none';
     });
-  }
-</script>
 
+    // Search form redirect
+    const searchForm = document.getElementById('site-search-form');
+    if (searchForm) {
+      searchForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const query = document.getElementById('search-input').value.trim();
+        if (query) {
+          window.location.href = `search-results.html?query=${encodeURIComponent(query)}`;
+        } else {
+          alert('Please enter a search term.');
+        }
+      });
+    }
+  </script>
 </body>
 </html>
