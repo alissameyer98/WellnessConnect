@@ -578,6 +578,45 @@ body.events-page .overlay {
   z-index: 5;
 }
 
+.calendar-table {
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  margin-top: 30px;
+  z-index: 1;
+}
+
+.calendar-table th {
+  background-color: #d1b897;
+  color: #fff;
+  padding: 12px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.calendar-table td {
+  background-color: #d1b897;
+  border: 1px solid #fff;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  height: 100px;
+  vertical-align: top;
+}
+
+.calendar-table td[data-event] {
+  font-weight: bold;
+  background-color: #b89d7a;
+}
+
+.calendar-table td:hover {
+  background-color: #a07f5d;
+}
+
+
 /* Responsive tweaks */
 @media (max-width: 768px) {
   body.events-page .calendar div {
