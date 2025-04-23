@@ -3,173 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Subscribe | Wellness Connect</title>
+  <title>Subscribe | Wellness Connect</title
+  <link rel="stylesheet" href="styles-home.css" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display&family=Raleway:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(rgba(255, 248, 240, 0.9), rgba(255, 248, 240, 0.9)),
-        url('images/wcbackground.png') no-repeat center center fixed;
-      background-size: cover;
-      color: #5c4033;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 50px;
-      background-color: #f5e6d9;
-      border-bottom: 2px solid #d1b897;
-      flex-wrap: wrap;
-    }
-
-    .logo-text {
-      font-family: 'Playfair Display', cursive;
-      font-size: 28px;
-      color: #333;
-      text-decoration: none;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-family: 'Raleway', sans-serif;
-      font-weight: 300;
-      font-size: 18px;
-    }
-
-    nav a:hover {
-      color: #f5a623;
-    }
-
-    nav input[type="text"] {
-      padding: 6px 12px;
-      border-radius: 20px;
-      border: 1px solid #ccc;
-      width: 200px;
-      transition: width 0.3s ease;
-    }
-
-    nav button {
-      background-color: #d1b897;
-      color: white;
-      border: none;
-      padding: 8px 16px;
-      border-radius: 20px;
-      cursor: pointer;
-      margin-left: 8px;
-      font-family: 'Raleway', sans-serif;
-      font-weight: 600;
-      font-size: 14px;
-      transition: background-color 0.3s ease;
-    }
-
-    nav button:hover {
-      background-color: #b89d7a;
-    }
-
-
-    main.subscribe-main {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 60px 20px;
-    }
-
-    .subscribe-card {
-      background-color: rgba(248, 232, 214, 0.9);
-      padding: 40px;
-      border-radius: 20px;
-      text-align: center;
-      max-width: 500px;
-      width: 100%;
-    }
-
-    .subscribe-card h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 48px;
-      margin-bottom: 20px;
-      color: #5c4033;
-    }
-
-    .subscribe-card p {
-      font-size: 18px;
-      margin-bottom: 30px;
-      color: #5c4033;
-    }
-
-    .subscribe-form input[type="email"] {
-      padding: 10px 20px;
-      border: 1px solid #ccc;
-      border-radius: 30px;
-      margin-bottom: 20px;
-      width: 100%;
-      font-size: 16px;
-    }
-
-    .subscribe-form button {
-      padding: 10px 20px;
-      border: none;
-      border-radius: 30px;
-      background-color: #d1b897;
-      color: white;
-      font-size: 18px;
-      font-family: 'Raleway', sans-serif;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .subscribe-form button:hover {
-      background-color: #b89d7a;
-    }
-
-    .success-message {
-      font-size: 18px;
-      color: #b66b7a; /* Mauve-Rose */
-      font-weight: bold;
-      margin-top: 20px;
-      opacity: 0;
-      transition: opacity 0.8s ease;
-    }
-
-    .success-message.show {
-      opacity: 1;
-    }
-
-    footer {
-      background-color: #d1b897;
-      color: #fff;
-      text-align: center;
-      padding: 20px 0;
-      font-size: 14px;
-      margin-top: auto;
-    }
-  </style>
 </head>
 
-<body>
-    <header class="site-header">
+<body class="subscribe-page">
+    <header>
     <a href="index.html" class="logo-text">Wellness Connect</a>
-    <nav class="nav-list">
+    <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
       <a href="resources.html">Resources</a>
@@ -177,6 +19,7 @@
       <a href="events.html">Events</a>
       <a href="faq.html">FAQ</a>
       <a href="contact.html">Contact</a>
+
       <form id="site-search-form" class="search-form">
         <input type="text" id="search-input" placeholder="Search..." />
         <button type="submit">Let's go!</button>
@@ -207,7 +50,7 @@
   </main>
 
   <footer>
-    <p>ALISSAMEYER@WELLNESSCONNECT.COM &copy; 2025 WELLNESS CONNECT</p>
+  <p><a href="mailto:alissameyer@wellnessconnect.com">alissameyer@wellnessconnect.com</a> © 2025 Wellness Connect</p>
   </footer>
 
   
