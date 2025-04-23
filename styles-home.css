@@ -883,6 +883,100 @@ body.contact-page .success-message.show {
     }
   }
 
+/* === Subscribe Page Styles === */
+body.subscribe-page {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(rgba(255, 248, 240, 0.9), rgba(255, 248, 240, 0.9)),
+    url('images/wcbackground.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #5c4033;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body.subscribe-page main.subscribe-main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+body.subscribe-page .subscribe-card {
+  background-color: rgba(248, 232, 214, 0.9);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+}
+
+body.subscribe-page .subscribe-card h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  margin-bottom: 20px;
+  color: #5c4033;
+}
+
+body.subscribe-page .subscribe-card p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #5c4033;
+}
+
+body.subscribe-page .subscribe-form input[type="email"],
+body.subscribe-page .subscribe-form input[type="text"],
+body.subscribe-page .subscribe-form select {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  width: 100%;
+  font-size: 16px;
+}
+
+body.subscribe-page .subscribe-form button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  background-color: #d1b897;
+  color: white;
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+body.subscribe-page .subscribe-form button:hover {
+  background-color: #b89d7a;
+}
+
+body.subscribe-page .success-message {
+  font-size: 18px;
+  color: #b66b7a;
+  font-weight: bold;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+body.subscribe-page .success-message.show {
+  opacity: 1;
+}
+
+/* Shared footer */
+footer {
+  background-color: #d1b897;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+
 /* === Global Footer (applies to every page) === */
 footer {
   display: flex;
