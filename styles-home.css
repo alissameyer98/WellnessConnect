@@ -1148,3 +1148,161 @@ body.events-page .logo-text,
 body.contact-page .logo-text {
   color: #5c4033;
 }
+
+/* === Contact Page Styles === */
+body.contact-page * {
+  box-sizing: border-box;
+}
+
+body.contact-page {
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url('feelsalive.png') no-repeat center center fixed;
+  background-size: cover;
+  color: #5c4033;
+}
+
+body.contact-page header {
+  /* reuse your global header rules; only needed if you had page-specific overrides */
+}
+
+body.contact-page .header-wave {
+  width: 550px;
+  height: 140px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(255, 250, 250, 0.30) 50%,
+    transparent 90%
+  );
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  filter: blur(10px);
+  z-index: 0;
+}
+
+body.contact-page .contact-header {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px;
+  color: #5c4033;
+  margin: 50px 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+body.contact-page .contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+body.contact-page .contact-card {
+  background-color: rgba(181, 147, 124, 0.95);
+  padding: 30px 20px;
+  border-radius: 20px;
+  flex: 1;
+  min-width: 280px;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(2px);
+}
+
+body.contact-page .contact-card h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+body.contact-page .contact-card p {
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+body.contact-page .contact-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+body.contact-page .contact-card input[type="email"],
+body.contact-page .contact-card button {
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body.contact-page .contact-card input[type="email"] {
+  background-color: #fff;
+  color: #333;
+}
+
+body.contact-page .contact-card button {
+  background-color: #d1b897;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+body.contact-page .contact-card button:hover {
+  background-color: #b89d7a;
+}
+
+body.contact-page .success-message {
+  font-size: 18px;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 20px;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+body.contact-page .success-message.show {
+  opacity: 1;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  body.contact-page .logo-text {
+    font-size: 24px;
+  }
+  body.contact-page nav {
+    gap: 20px;
+  }
+  body.contact-page nav input[type="text"] {
+    width: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  body.contact-page header {
+    flex-direction: column;
+    align-items: center;
+  }
+  body.contact-page nav {
+    justify-content: center;
+    gap: 15px;
+  }
+  body.contact-page .logo-text {
+    font-size: 20px;
+  }
+  body.contact-page nav a {
+    font-size: 14px;
+  }
+  body.contact-page nav input[type="text"] {
+    width: 100%;
+  }
+}
+
