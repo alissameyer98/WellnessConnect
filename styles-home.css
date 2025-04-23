@@ -568,6 +568,32 @@ body.events-page .overlay {
   background-color: #a07f5d;
 }
 
+td.event {
+  position: relative;
+  cursor: pointer;
+}
+
+td.event .popup {
+  display: none;
+  position: absolute;
+  bottom: 110%; /* position above the cell */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  color: #5c4033;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+
+/* Show on hover */
+td.event:hover .popup {
+  display: block;
+}
+
 
 /* Responsive tweaks */
 @media (max-width: 768px) {
