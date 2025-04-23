@@ -198,6 +198,8 @@
     <option value="both">All Updates</option>
   </select>
   <button type="submit">Subscribe</button>
+    <input type="hidden" name="_next" value="thank-you.html">
+
 </form>
 
       <div id="success-message" class="success-message">Success! You have been added to our email list!</div>
@@ -220,17 +222,7 @@
       }
     });
 
-    // Subscribe form functionality with fade-in
-    document.getElementById('subscribe-form').addEventListener('submit', function (event) {
-      event.preventDefault();
-      const emailField = document.getElementById('email');
-      const successMessage = document.getElementById('success-message');
-
-      if (emailField.value.trim() !== '') {
-        successMessage.classList.add('show'); // Add fade-in effect
-        emailField.value = ''; // Clear the input field
-      }
-    });
+  
   </script>
 </body>
 </html>
