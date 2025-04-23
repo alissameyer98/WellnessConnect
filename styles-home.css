@@ -372,9 +372,8 @@ iframe {
 /* page wrapper */
 body.community-page {
   font-family: 'Montserrat', sans-serif;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  display: block !important;
+  min-height: auto !important;
   background: url('community.png') no-repeat center center fixed;
   background-size: cover;
   color: #5c4033;
