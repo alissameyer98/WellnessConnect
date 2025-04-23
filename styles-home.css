@@ -1189,10 +1189,11 @@ body.contact-page .contact-header {
   font-family: 'Playfair Display', serif;
   font-size: 48px;
   color: #5c4033;
-  margin: 50px 0 20px;
+/* pull it up over the glow */
+  margin: 0 0 20px;
   position: relative;
   z-index: 1;
-}
+  }
 
 body.contact-page .contact-container {
   display: flex;
